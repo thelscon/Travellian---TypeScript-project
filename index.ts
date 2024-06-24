@@ -2,8 +2,8 @@ type ArrangeElementsType = (maximumWindowWidth : number) => void
 
 const ArrangeElements : ArrangeElementsType = (maximumWindowWidth) => {
     if (maximumWindowWidth < 768) {
-        logotypeSVG.setAttribute ('width' , '140')
-        logotypeSVG.setAttribute ('height' , '28')
+        logotypeSVG.style.width = '140px'
+        logotypeSVG.style.height = '28px'
         logotypeSVG.setAttribute ('viewBox' , '0 0 140 28')
     
         logotypeSVGPath1.setAttribute ('d' , 'M36.2348 7.59698V23.6677H33.2076V7.59698H28.2598V5.02466H41.1572V7.59698H36.2348Z')
@@ -20,8 +20,8 @@ const ArrangeElements : ArrangeElementsType = (maximumWindowWidth) => {
     }
     else {
         if (maximumWindowWidth < 1152) {
-            logotypeSVG.setAttribute ('width' , '194')
-            logotypeSVG.setAttribute ('height' , '37')
+            logotypeSVG.style.width = '194px'
+            logotypeSVG.style.height = '37px'
             logotypeSVG.setAttribute ('viewBox' , '0 0 194 37')
     
             logotypeSVGPath1.setAttribute ('d' , 'M54.7057 11.0912V32.6645H50.642V11.0912H44V7.6381H61.3136V11.0912H54.7057Z')
@@ -37,8 +37,8 @@ const ArrangeElements : ArrangeElementsType = (maximumWindowWidth) => {
             logotypeSVGPath11.setAttribute ('d' , 'M11.3503 26.17L16 30.7537L20.6497 26.17L16 21.5863L11.3503 26.17ZM16 3.92478V3.93167C14.6692 3.93167 13.3384 4.43254 12.3245 5.43199L12.3199 5.4274C11.3084 6.42685 10.8003 7.74106 10.8003 9.05528C10.8003 10.3718 11.306 11.6837 12.3152 12.6786H12.3222L16 16.3019L19.6755 12.6786H19.6824C20.6986 11.6768 21.2067 10.3649 21.2067 9.05528H21.1997C21.1997 7.74336 20.6916 6.43144 19.6778 5.43199C18.657 4.42795 17.3261 3.92478 16 3.92478ZM23.3299 28.8122L17.3401 34.717L16 36.0381L14.6599 34.717L8.67007 28.8122L2.68026 34.717L0 32.0748L13.3221 18.9441L9.64661 15.3208L9.65127 15.3162C7.89162 13.5838 7.01296 11.3161 7.01296 9.05528C7.01296 6.79216 7.89162 4.52674 9.64661 2.79666V2.79207C11.4016 1.06199 13.702 0.195801 16 0.195801V0.202694C18.3027 0.202694 20.6054 1.06658 22.3557 2.79207C24.1107 4.52215 24.987 6.78986 24.987 9.05758H24.98C24.98 11.323 24.1037 13.5884 22.3511 15.3185L22.3557 15.3231L18.6803 18.9441L32 32.0748L29.3197 34.717L23.3299 28.8122Z')
         }
         else {
-            logotypeSVG.setAttribute ('width' , '234')
-            logotypeSVG.setAttribute ('height' , '46')
+            logotypeSVG.style.width = '234px'
+            logotypeSVG.style.height = '46px'
             logotypeSVG.setAttribute ('viewBox' , '0 0 234 46')
     
             logotypeSVGPath1.setAttribute ('d' , 'M60.5641 12.2979V39.1589H55.5044V12.2979H47.2344V7.99844H68.7916V12.2979H60.5641Z')
@@ -56,41 +56,45 @@ const ArrangeElements : ArrangeElementsType = (maximumWindowWidth) => {
     }
 }
 
-
-
 // begin
 const bodyElemenent = document.querySelector ('body')
+if (bodyElemenent) {
+    bodyElemenent.style.minWidth = '320px'
+}
 
 // begin initial header element
 const headerElement = document.createElement ('header')
-headerElement.style.backgroundColor = 'black'
+headerElement.style.backgroundColor = 'gray'
+
+headerElement.style.display = 'grid'
 
 // begin initial logotype
 const logotypeSVG = document.createElementNS ('http://www.w3.org/2000/svg' , 'svg')
 logotypeSVG.setAttribute ('xmlns' , 'http://www.w3.org/2000/svg')
+logotypeSVG.style.gridArea = 'logotypeSVG'
 
 const logotypeSVGPath1 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath1.setAttribute ('fill' , 'white')
+logotypeSVGPath1.style.fill = 'white'
 const logotypeSVGPath2 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath2.setAttribute ('fill' , 'white')
+logotypeSVGPath2.style.fill = 'white'
 const logotypeSVGPath3 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath3.setAttribute ('fill' , 'white')
+logotypeSVGPath3.style.fill = 'white'
 const logotypeSVGPath4 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath4.setAttribute ('fill' , 'white')
+logotypeSVGPath4.style.fill = 'white'
 const logotypeSVGPath5 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath5.setAttribute ('fill' , 'white')
+logotypeSVGPath5.style.fill = 'white'
 const logotypeSVGPath6 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath6.setAttribute ('fill' , 'white')
+logotypeSVGPath6.style.fill = 'white'
 const logotypeSVGPath7 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath7.setAttribute ('fill' , 'white')
+logotypeSVGPath7.style.fill = 'white'
 const logotypeSVGPath8 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath8.setAttribute ('fill' , 'white')
+logotypeSVGPath8.style.fill = 'white'
 const logotypeSVGPath9 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath9.setAttribute ('fill' , 'white')
+logotypeSVGPath9.style.fill = 'white'
 const logotypeSVGPath10 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath10.setAttribute ('fill' , 'white')
+logotypeSVGPath10.style.fill = 'white'
 const logotypeSVGPath11 : SVGPathElement = document.createElementNS ('http://www.w3.org/2000/svg' , 'path')
-logotypeSVGPath11.setAttribute ('fill' , 'white')
+logotypeSVGPath11.style.fill = 'white'
 
 ArrangeElements (innerWidth)
 
@@ -124,6 +128,7 @@ menuButtonImage.append (menuButtonImagePath)
 const menuButton = document.createElement ('button')
 menuButton.textContent = ''
 
+menuButton.style.gridArea = 'menuButton'
 menuButton.style.width = '38px'
 menuButton.style.height = '24px'
 menuButton.style.border = '0px'
@@ -132,6 +137,7 @@ menuButton.style.background = `url('data:image/svg+xml, ${menuButtonImage.outerH
 
 // begin initial site navigation
 const siteNavigation = document.createElement ('nav')
+siteNavigation.style.gridArea = 'siteNavigation'
 
 const homeNavigationItem = document.createElement ('a')
 homeNavigationItem.textContent = 'Home'
@@ -157,35 +163,61 @@ siteNavigation.append (
 )
 // end initial site navigation
 
-// begin initial signUpButton
-const signUpButton = document.createElement ('button')
-signUpButton.textContent = 'Sign Up'
-// end initial signUpButton
-
 //begin initial loginButton
 const loginButton = document.createElement ('button')
 loginButton.textContent = 'Login'
+loginButton.style.gridArea = 'loginButton'
 // end initial loginButton
+
+// begin initial signUpButton
+const signUpButton = document.createElement ('button')
+signUpButton.textContent = 'Sign Up'
+signUpButton.style.gridArea = 'signUpButton'
+// end initial signUpButton
 
 
 if (innerWidth < 1152) {
+    headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"'
+    // headerElement.style.gridTemplateColumns = 'repeat(2 , max-content)'
+    // headerElement.style.justifyContent = 'space-between'
     headerElement.append (
         logotypeSVG ,
         menuButton)
 }
 else {
-    if (innerWidth >= 1152) {
-        headerElement.append (
-            logotypeSVG ,
-            siteNavigation ,
-            loginButton ,
-            signUpButton
-        )
-    }
+    headerElement.style.gridTemplateAreas = '"logotypeSVG siteNavigation loginButton signUpButton"'
+    headerElement.append (
+        logotypeSVG ,
+        siteNavigation ,
+        loginButton ,
+        signUpButton
+    )
 }
 
 let currentWindowWidth = innerWidth
 window.addEventListener ('resize' , () => {
+    if (innerWidth < 768) {
+        if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
+            headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"'
+        }
+    }
+    else {
+        if (innerWidth < 1152) {
+            if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
+                headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"'
+            }
+        }
+        else {
+            if (headerElement.style.gridTemplateAreas !== '"logotypeSVG siteNavigation loginButton signUpButton"') {
+                headerElement.style.gridTemplateAreas = '"logotypeSVG siteNavigation loginButton signUpButton"'
+            }
+            if (innerWidth < 1440) {}
+            else {
+                if (innerWidth < 1920) {}
+                else {}
+            }
+        }
+    }
 
     if (innerWidth < 768 && currentWindowWidth >= 768) {
         console.log ('mobile')

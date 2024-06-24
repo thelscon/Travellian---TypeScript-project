@@ -1,8 +1,8 @@
 "use strict";
 const ArrangeElements = (maximumWindowWidth) => {
     if (maximumWindowWidth < 768) {
-        logotypeSVG.setAttribute('width', '140');
-        logotypeSVG.setAttribute('height', '28');
+        logotypeSVG.style.width = '140px';
+        logotypeSVG.style.height = '28px';
         logotypeSVG.setAttribute('viewBox', '0 0 140 28');
         logotypeSVGPath1.setAttribute('d', 'M36.2348 7.59698V23.6677H33.2076V7.59698H28.2598V5.02466H41.1572V7.59698H36.2348Z');
         logotypeSVGPath2.setAttribute('d', 'M43.8665 13.5184C44.1634 12.7204 44.5534 12.1304 45.0367 11.7483C45.5285 11.3663 46.1348 11.1753 46.8556 11.1753C47.2457 11.1753 47.6273 11.222 48.0004 11.3154C48.382 11.4088 48.7551 11.5446 49.1197 11.7229L48.1276 14.066C47.8901 13.8962 47.6315 13.7731 47.3516 13.6967C47.0803 13.6118 46.7751 13.5694 46.4359 13.5694C45.5201 13.5694 44.8629 13.9387 44.4644 14.6773C44.0658 15.4074 43.8665 16.6383 43.8665 18.3702V23.6677H41.1064V11.5701H43.8665V13.5184Z');
@@ -18,8 +18,8 @@ const ArrangeElements = (maximumWindowWidth) => {
     }
     else {
         if (maximumWindowWidth < 1152) {
-            logotypeSVG.setAttribute('width', '194');
-            logotypeSVG.setAttribute('height', '37');
+            logotypeSVG.style.width = '194px';
+            logotypeSVG.style.height = '37px';
             logotypeSVG.setAttribute('viewBox', '0 0 194 37');
             logotypeSVGPath1.setAttribute('d', 'M54.7057 11.0912V32.6645H50.642V11.0912H44V7.6381H61.3136V11.0912H54.7057Z');
             logotypeSVGPath2.setAttribute('d', 'M64.9505 19.0402C65.3489 17.9689 65.8725 17.1769 66.5213 16.664C67.1816 16.1512 67.9954 15.8948 68.963 15.8948C69.4866 15.8948 69.9989 15.9574 70.4997 16.0828C71.012 16.2082 71.5128 16.3905 72.0023 16.6298L70.6705 19.7752C70.3517 19.5473 70.0046 19.3821 69.6289 19.2795C69.2647 19.1655 68.8549 19.1085 68.3995 19.1085C67.1702 19.1085 66.288 19.6043 65.753 20.5958C65.218 21.5759 64.9505 23.2283 64.9505 25.5532V32.6645H61.2453V16.4247H64.9505V19.0402Z');
@@ -34,8 +34,8 @@ const ArrangeElements = (maximumWindowWidth) => {
             logotypeSVGPath11.setAttribute('d', 'M11.3503 26.17L16 30.7537L20.6497 26.17L16 21.5863L11.3503 26.17ZM16 3.92478V3.93167C14.6692 3.93167 13.3384 4.43254 12.3245 5.43199L12.3199 5.4274C11.3084 6.42685 10.8003 7.74106 10.8003 9.05528C10.8003 10.3718 11.306 11.6837 12.3152 12.6786H12.3222L16 16.3019L19.6755 12.6786H19.6824C20.6986 11.6768 21.2067 10.3649 21.2067 9.05528H21.1997C21.1997 7.74336 20.6916 6.43144 19.6778 5.43199C18.657 4.42795 17.3261 3.92478 16 3.92478ZM23.3299 28.8122L17.3401 34.717L16 36.0381L14.6599 34.717L8.67007 28.8122L2.68026 34.717L0 32.0748L13.3221 18.9441L9.64661 15.3208L9.65127 15.3162C7.89162 13.5838 7.01296 11.3161 7.01296 9.05528C7.01296 6.79216 7.89162 4.52674 9.64661 2.79666V2.79207C11.4016 1.06199 13.702 0.195801 16 0.195801V0.202694C18.3027 0.202694 20.6054 1.06658 22.3557 2.79207C24.1107 4.52215 24.987 6.78986 24.987 9.05758H24.98C24.98 11.323 24.1037 13.5884 22.3511 15.3185L22.3557 15.3231L18.6803 18.9441L32 32.0748L29.3197 34.717L23.3299 28.8122Z');
         }
         else {
-            logotypeSVG.setAttribute('width', '234');
-            logotypeSVG.setAttribute('height', '46');
+            logotypeSVG.style.width = '234px';
+            logotypeSVG.style.height = '46px';
             logotypeSVG.setAttribute('viewBox', '0 0 234 46');
             logotypeSVGPath1.setAttribute('d', 'M60.5641 12.2979V39.1589H55.5044V12.2979H47.2344V7.99844H68.7916V12.2979H60.5641Z');
             logotypeSVGPath2.setAttribute('d', 'M73.3199 22.1952C73.816 20.8614 74.4679 19.8752 75.2758 19.2366C76.0978 18.5981 77.1112 18.2788 78.3159 18.2788C78.9679 18.2788 79.6057 18.3569 80.2293 18.513C80.8671 18.6691 81.4907 18.8961 82.1001 19.1941L80.4419 23.1104C80.045 22.8266 79.6128 22.6209 79.145 22.4932C78.6915 22.3513 78.1813 22.2803 77.6144 22.2803C76.0837 22.2803 74.9853 22.8976 74.3191 24.1321C73.653 25.3524 73.3199 27.4099 73.3199 30.3046V39.1589H68.7066V18.9387H73.3199V22.1952Z');
@@ -53,34 +53,39 @@ const ArrangeElements = (maximumWindowWidth) => {
 };
 // begin
 const bodyElemenent = document.querySelector('body');
+if (bodyElemenent) {
+    bodyElemenent.style.minWidth = '320px';
+}
 // begin initial header element
 const headerElement = document.createElement('header');
-headerElement.style.backgroundColor = 'black';
+headerElement.style.backgroundColor = 'gray';
+headerElement.style.display = 'grid';
 // begin initial logotype
 const logotypeSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 logotypeSVG.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+logotypeSVG.style.gridArea = 'logotypeSVG';
 const logotypeSVGPath1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath1.setAttribute('fill', 'white');
+logotypeSVGPath1.style.fill = 'white';
 const logotypeSVGPath2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath2.setAttribute('fill', 'white');
+logotypeSVGPath2.style.fill = 'white';
 const logotypeSVGPath3 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath3.setAttribute('fill', 'white');
+logotypeSVGPath3.style.fill = 'white';
 const logotypeSVGPath4 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath4.setAttribute('fill', 'white');
+logotypeSVGPath4.style.fill = 'white';
 const logotypeSVGPath5 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath5.setAttribute('fill', 'white');
+logotypeSVGPath5.style.fill = 'white';
 const logotypeSVGPath6 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath6.setAttribute('fill', 'white');
+logotypeSVGPath6.style.fill = 'white';
 const logotypeSVGPath7 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath7.setAttribute('fill', 'white');
+logotypeSVGPath7.style.fill = 'white';
 const logotypeSVGPath8 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath8.setAttribute('fill', 'white');
+logotypeSVGPath8.style.fill = 'white';
 const logotypeSVGPath9 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath9.setAttribute('fill', 'white');
+logotypeSVGPath9.style.fill = 'white';
 const logotypeSVGPath10 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath10.setAttribute('fill', 'white');
+logotypeSVGPath10.style.fill = 'white';
 const logotypeSVGPath11 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-logotypeSVGPath11.setAttribute('fill', 'white');
+logotypeSVGPath11.style.fill = 'white';
 ArrangeElements(innerWidth);
 logotypeSVG.append(logotypeSVGPath1, logotypeSVGPath2, logotypeSVGPath3, logotypeSVGPath4, logotypeSVGPath5, logotypeSVGPath6, logotypeSVGPath7, logotypeSVGPath8, logotypeSVGPath9, logotypeSVGPath10, logotypeSVGPath11);
 // end initial logotype
@@ -96,6 +101,7 @@ menuButtonImagePath.setAttribute('fill', 'white');
 menuButtonImage.append(menuButtonImagePath);
 const menuButton = document.createElement('button');
 menuButton.textContent = '';
+menuButton.style.gridArea = 'menuButton';
 menuButton.style.width = '38px';
 menuButton.style.height = '24px';
 menuButton.style.border = '0px';
@@ -103,6 +109,7 @@ menuButton.style.background = `url('data:image/svg+xml, ${menuButtonImage.outerH
 // end initial menu button
 // begin initial site navigation
 const siteNavigation = document.createElement('nav');
+siteNavigation.style.gridArea = 'siteNavigation';
 const homeNavigationItem = document.createElement('a');
 homeNavigationItem.textContent = 'Home';
 const exploreNavigationItem = document.createElement('a');
@@ -115,24 +122,50 @@ const pricingNavigationItem = document.createElement('a');
 pricingNavigationItem.textContent = 'Pricing';
 siteNavigation.append(homeNavigationItem, exploreNavigationItem, travelNavigationItem, blogNavigationItem, pricingNavigationItem);
 // end initial site navigation
-// begin initial signUpButton
-const signUpButton = document.createElement('button');
-signUpButton.textContent = 'Sign Up';
-// end initial signUpButton
 //begin initial loginButton
 const loginButton = document.createElement('button');
 loginButton.textContent = 'Login';
+loginButton.style.gridArea = 'loginButton';
 // end initial loginButton
+// begin initial signUpButton
+const signUpButton = document.createElement('button');
+signUpButton.textContent = 'Sign Up';
+signUpButton.style.gridArea = 'signUpButton';
+// end initial signUpButton
 if (innerWidth < 1152) {
+    headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
+    // headerElement.style.gridTemplateColumns = 'repeat(2 , max-content)'
+    // headerElement.style.justifyContent = 'space-between'
     headerElement.append(logotypeSVG, menuButton);
 }
 else {
-    if (innerWidth >= 1152) {
-        headerElement.append(logotypeSVG, siteNavigation, loginButton, signUpButton);
-    }
+    headerElement.style.gridTemplateAreas = '"logotypeSVG siteNavigation loginButton signUpButton"';
+    headerElement.append(logotypeSVG, siteNavigation, loginButton, signUpButton);
 }
 let currentWindowWidth = innerWidth;
 window.addEventListener('resize', () => {
+    if (innerWidth < 768) {
+        if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
+            headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
+        }
+    }
+    else {
+        if (innerWidth < 1152) {
+            if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
+                headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
+            }
+        }
+        else {
+            if (headerElement.style.gridTemplateAreas !== '"logotypeSVG siteNavigation loginButton signUpButton"') {
+                headerElement.style.gridTemplateAreas = '"logotypeSVG siteNavigation loginButton signUpButton"';
+            }
+            if (innerWidth < 1440) { }
+            else {
+                if (innerWidth < 1920) { }
+                else { }
+            }
+        }
+    }
     if (innerWidth < 768 && currentWindowWidth >= 768) {
         console.log('mobile');
         currentWindowWidth = innerWidth;
