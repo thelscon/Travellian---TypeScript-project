@@ -134,8 +134,6 @@ signUpButton.style.gridArea = 'signUpButton';
 // end initial signUpButton
 if (innerWidth < 1152) {
     headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
-    // headerElement.style.gridTemplateColumns = 'repeat(2 , max-content)'
-    // headerElement.style.justifyContent = 'space-between'
     headerElement.append(logotypeSVG, menuButton);
 }
 else {
@@ -144,48 +142,56 @@ else {
 }
 let currentWindowWidth = innerWidth;
 window.addEventListener('resize', () => {
-    if (innerWidth < 768) {
+    if (innerWidth < 768) { //  768 > x
         if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
             headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
         }
+        if (currentWindowWidth < 1152) {
+            currentWindowWidth = innerWidth;
+            ArrangeElements(innerWidth);
+        }
+        else {
+            currentWindowWidth = innerWidth;
+            ArrangeElements(innerWidth);
+            siteNavigation.remove();
+            loginButton.remove();
+            signUpButton.remove();
+            headerElement.append(menuButton);
+        }
     }
-    else {
-        if (innerWidth < 1152) {
+    else { // x >= 768
+        if (innerWidth < 1152) { //  1152 > x >= 768
             if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
                 headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
             }
+            if (currentWindowWidth >= 1152 || currentWindowWidth < 768) {
+                currentWindowWidth = innerWidth;
+                ArrangeElements(innerWidth);
+                siteNavigation.remove();
+                loginButton.remove();
+                signUpButton.remove();
+                headerElement.append(menuButton);
+            }
         }
-        else {
+        else { //  x >= 1152
             if (headerElement.style.gridTemplateAreas !== '"logotypeSVG siteNavigation loginButton signUpButton"') {
                 headerElement.style.gridTemplateAreas = '"logotypeSVG siteNavigation loginButton signUpButton"';
             }
-            if (innerWidth < 1440) { }
-            else {
-                if (innerWidth < 1920) { }
-                else { }
+            if (currentWindowWidth < 1152) {
+                currentWindowWidth = innerWidth;
+                ArrangeElements(innerWidth);
+                menuButton.remove();
+                headerElement.append(siteNavigation, loginButton, signUpButton);
+            }
+            if (innerWidth < 1440) { //  1440 > x >= 1152
+            }
+            else { // x >= 1440
+                if (innerWidth < 1920) { // 1920 > x >= 1440
+                }
+                else { // x >= 1920
+                }
             }
         }
-    }
-    if (innerWidth < 768 && currentWindowWidth >= 768) {
-        console.log('mobile');
-        currentWindowWidth = innerWidth;
-        ArrangeElements(innerWidth);
-    }
-    if ((innerWidth < 1152 && innerWidth >= 768) && (currentWindowWidth >= 1152 || currentWindowWidth < 768)) {
-        console.log('tablet');
-        currentWindowWidth = innerWidth;
-        ArrangeElements(innerWidth);
-        siteNavigation.remove();
-        loginButton.remove();
-        signUpButton.remove();
-        headerElement.append(menuButton);
-    }
-    if (innerWidth >= 1152 && currentWindowWidth < 1152) {
-        console.log('desktop');
-        currentWindowWidth = innerWidth;
-        ArrangeElements(innerWidth);
-        menuButton.remove();
-        headerElement.append(siteNavigation, loginButton, signUpButton);
     }
 });
 // end initial header element
