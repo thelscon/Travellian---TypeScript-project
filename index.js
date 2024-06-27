@@ -1,6 +1,7 @@
 "use strict";
 const ArrangeElements = (maximumWindowWidth) => {
     if (maximumWindowWidth < 768) {
+        console.log('svg < 768');
         logotypeSVG.style.width = '140px';
         logotypeSVG.style.height = '28px';
         logotypeSVG.setAttribute('viewBox', '0 0 140 28');
@@ -18,6 +19,7 @@ const ArrangeElements = (maximumWindowWidth) => {
     }
     else {
         if (maximumWindowWidth < 1152) {
+            console.log('svg < 1152');
             logotypeSVG.style.width = '194px';
             logotypeSVG.style.height = '37px';
             logotypeSVG.setAttribute('viewBox', '0 0 194 37');
@@ -34,6 +36,7 @@ const ArrangeElements = (maximumWindowWidth) => {
             logotypeSVGPath11.setAttribute('d', 'M11.3503 26.17L16 30.7537L20.6497 26.17L16 21.5863L11.3503 26.17ZM16 3.92478V3.93167C14.6692 3.93167 13.3384 4.43254 12.3245 5.43199L12.3199 5.4274C11.3084 6.42685 10.8003 7.74106 10.8003 9.05528C10.8003 10.3718 11.306 11.6837 12.3152 12.6786H12.3222L16 16.3019L19.6755 12.6786H19.6824C20.6986 11.6768 21.2067 10.3649 21.2067 9.05528H21.1997C21.1997 7.74336 20.6916 6.43144 19.6778 5.43199C18.657 4.42795 17.3261 3.92478 16 3.92478ZM23.3299 28.8122L17.3401 34.717L16 36.0381L14.6599 34.717L8.67007 28.8122L2.68026 34.717L0 32.0748L13.3221 18.9441L9.64661 15.3208L9.65127 15.3162C7.89162 13.5838 7.01296 11.3161 7.01296 9.05528C7.01296 6.79216 7.89162 4.52674 9.64661 2.79666V2.79207C11.4016 1.06199 13.702 0.195801 16 0.195801V0.202694C18.3027 0.202694 20.6054 1.06658 22.3557 2.79207C24.1107 4.52215 24.987 6.78986 24.987 9.05758H24.98C24.98 11.323 24.1037 13.5884 22.3511 15.3185L22.3557 15.3231L18.6803 18.9441L32 32.0748L29.3197 34.717L23.3299 28.8122Z');
         }
         else {
+            console.log('svg >= 1440');
             logotypeSVG.style.width = '234px';
             logotypeSVG.style.height = '46px';
             logotypeSVG.setAttribute('viewBox', '0 0 234 46');
@@ -54,6 +57,7 @@ const ArrangeElements = (maximumWindowWidth) => {
 // begin
 const bodyElemenent = document.querySelector('body');
 if (bodyElemenent) {
+    bodyElemenent.style.margin = '0px';
     bodyElemenent.style.minWidth = '320px';
 }
 // begin initial header element
@@ -102,6 +106,7 @@ menuButtonImage.append(menuButtonImagePath);
 const menuButton = document.createElement('button');
 menuButton.textContent = '';
 menuButton.style.gridArea = 'menuButton';
+menuButton.style.padding = '0px';
 menuButton.style.width = '38px';
 menuButton.style.height = '24px';
 menuButton.style.border = '0px';
@@ -140,48 +145,164 @@ else {
     headerElement.style.gridTemplateAreas = '"logotypeSVG siteNavigation loginButton signUpButton"';
     headerElement.append(logotypeSVG, siteNavigation, loginButton, signUpButton);
 }
+// end initial header element
+// ____________________________________________________________________________________________
+// begin initial main element
+const mainElement = document.createElement('main');
+mainElement.style.display = 'grid';
+// begin initial heading element
+const mainElementHeading = document.createElement('h2');
+mainElementHeading.style.gridArea = 'mainElementHeading';
+mainElementHeading.textContent = 'Start your unforgettable journey with us.';
+mainElementHeading.style.margin = '0px';
+// end initial heading element
+// begin initial paragraph element
+const mainElementParagraph = document.createElement('p');
+mainElementParagraph.style.gridArea = 'mainElementParagraph';
+mainElementParagraph.textContent = 'The best travel for your jouney begins now';
+mainElementParagraph.style.margin = '0px';
+// end initial paragraph element
+// begin initial form element
+const mainElementForm = document.createElement('form');
+mainElementForm.style.gridArea = 'mainElementForm';
+mainElementForm.style.display = 'grid';
+const mainElementFormDestination = document.createElement('input');
+mainElementFormDestination.style.gridArea = 'mainElementFormDestination';
+mainElementFormDestination.type = 'text';
+const mainElementFormPerson = document.createElement('input');
+mainElementFormPerson.style.gridArea = 'mainElementFormPerson';
+mainElementFormPerson.type = 'text';
+const mainElementFormCheckIn = document.createElement('input');
+mainElementFormCheckIn.style.gridArea = 'mainElementFormCheckIn';
+mainElementFormCheckIn.type = 'text';
+const mainElementFormCheckOut = document.createElement('input');
+mainElementFormCheckOut.style.gridArea = 'mainElementFormCheckOut';
+mainElementFormCheckOut.type = 'text';
+const mainElementFormBookNow = document.createElement('button');
+mainElementFormBookNow.style.gridArea = 'mainElementFormBookNow';
+mainElementFormBookNow.type = 'submit';
+mainElementFormBookNow.textContent = 'Book Now';
+if (innerWidth < 768) {
+    mainElementForm.style.gridTemplateAreas = '"mainElementFormDestination""mainElementFormPerson""mainElementFormCheckIn""mainElementFormCheckOut""mainElementFormBookNow"';
+}
+else {
+    if (innerWidth < 1152) {
+        mainElementForm.style.gridTemplateAreas = '"mainElementFormDestination mainElementFormPerson mainElementFormBookNow""mainElementFormCheckIn mainElementFormCheckOut mainElementFormBookNow"';
+    }
+    else {
+        mainElementForm.style.gridTemplateAreas = '"mainElementFormDestination mainElementFormPerson mainElementFormCheckIn mainElementFormCheckOut mainElementFormBookNow"';
+    }
+}
+mainElementForm.prepend(mainElementFormDestination, mainElementFormPerson, mainElementFormCheckIn, mainElementFormCheckOut, mainElementFormBookNow);
+// end initial form element
+// begin initial slider
+const mainElementSlider = document.createElement('section');
+mainElementSlider.style.gridArea = 'mainElementSlider';
+mainElementSlider.style.display = 'grid';
+// end initial slider
+if (innerWidth < 768) {
+    mainElement.style.gridTemplateAreas = '"mainElementHeading""mainElementParagraph""mainElementForm"';
+    mainElement.append(mainElementHeading, mainElementParagraph, mainElementForm);
+}
+else {
+    mainElement.style.gridTemplateAreas = '"mainElementHeading mainElementSlider""mainElementParagraph mainElementSlider""mainElementForm mainElementSlider"';
+    mainElement.append(mainElementHeading, mainElementParagraph, mainElementForm, mainElementSlider);
+}
+// end initial main element
+bodyElemenent?.prepend(headerElement, mainElement);
+// end
 let currentWindowWidth = innerWidth;
 window.addEventListener('resize', () => {
-    if (innerWidth < 768) { //  768 > x
+    if (innerWidth < 768) { //  x < 768
         if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
             headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
         }
-        if (currentWindowWidth < 1152) {
-            currentWindowWidth = innerWidth;
-            ArrangeElements(innerWidth);
+        if (mainElementForm.style.gridTemplateAreas !== '"mainElementFormDestination""mainElementFormPerson""mainElementFormCheckIn""mainElementFormCheckOut""mainElementFormBookNow"') {
+            mainElementForm.style.gridTemplateAreas = '"mainElementFormDestination""mainElementFormPerson""mainElementFormCheckIn""mainElementFormCheckOut""mainElementFormBookNow"';
         }
+        if (currentWindowWidth < 768) { }
         else {
-            currentWindowWidth = innerWidth;
-            ArrangeElements(innerWidth);
-            siteNavigation.remove();
-            loginButton.remove();
-            signUpButton.remove();
-            headerElement.append(menuButton);
-        }
-    }
-    else { // x >= 768
-        if (innerWidth < 1152) { //  1152 > x >= 768
-            if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
-                headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
+            if (currentWindowWidth < 1152) {
+                currentWindowWidth = innerWidth;
+                ArrangeElements(innerWidth);
             }
-            if (currentWindowWidth >= 1152 || currentWindowWidth < 768) {
+            else {
                 currentWindowWidth = innerWidth;
                 ArrangeElements(innerWidth);
                 siteNavigation.remove();
                 loginButton.remove();
                 signUpButton.remove();
                 headerElement.append(menuButton);
+                if (currentWindowWidth < 1440) { }
+                else {
+                    if (currentWindowWidth < 1920) { }
+                    else { }
+                }
+            }
+        }
+        // if (currentWindowWidth < 1152) {
+        //     ArrangeElements (innerWidth)
+        // }
+        // else {       
+        //     ArrangeElements (innerWidth)
+        //     siteNavigation.remove ()
+        //     loginButton.remove ()
+        //     signUpButton.remove ()
+        //     headerElement.append (menuButton)
+        // }
+    }
+    else { // x >= 768
+        if (innerWidth < 1152) { //  1152 > x >= 768
+            if (headerElement.style.gridTemplateAreas !== '"logotypeSVG menuButton"') {
+                headerElement.style.gridTemplateAreas = '"logotypeSVG menuButton"';
+            }
+            if (mainElementForm.style.gridTemplateAreas !== '"mainElementFormDestination mainElementFormPerson mainElementFormBookNow""mainElementFormCheckIn mainElementFormCheckOut mainElementFormBookNow"') {
+                mainElementForm.style.gridTemplateAreas = '"mainElementFormDestination mainElementFormPerson mainElementFormBookNow""mainElementFormCheckIn mainElementFormCheckOut mainElementFormBookNow"';
+            }
+            if (currentWindowWidth < 768) {
+                currentWindowWidth = innerWidth;
+                ArrangeElements(innerWidth);
+            }
+            else {
+                if (currentWindowWidth < 1152) {
+                }
+                else {
+                    currentWindowWidth = innerWidth;
+                    ArrangeElements(innerWidth);
+                    siteNavigation.remove();
+                    loginButton.remove();
+                    signUpButton.remove();
+                    headerElement.append(menuButton);
+                    if (currentWindowWidth < 1440) { }
+                    else {
+                        if (currentWindowWidth < 1920) { }
+                        else { }
+                    }
+                }
             }
         }
         else { //  x >= 1152
             if (headerElement.style.gridTemplateAreas !== '"logotypeSVG siteNavigation loginButton signUpButton"') {
                 headerElement.style.gridTemplateAreas = '"logotypeSVG siteNavigation loginButton signUpButton"';
             }
-            if (currentWindowWidth < 1152) {
-                currentWindowWidth = innerWidth;
-                ArrangeElements(innerWidth);
-                menuButton.remove();
-                headerElement.append(siteNavigation, loginButton, signUpButton);
+            if (mainElementForm.style.gridTemplateAreas !== '"mainElementFormDestination mainElementFormPerson mainElementFormCheckIn mainElementFormCheckOut mainElementFormBookNow"') {
+                mainElementForm.style.gridTemplateAreas = '"mainElementFormDestination mainElementFormPerson mainElementFormCheckIn mainElementFormCheckOut mainElementFormBookNow"';
+            }
+            if (currentWindowWidth < 768) { }
+            else {
+                if (currentWindowWidth < 1152) {
+                    currentWindowWidth = innerWidth;
+                    ArrangeElements(innerWidth);
+                    menuButton.remove();
+                    headerElement.append(siteNavigation, loginButton, signUpButton);
+                }
+                else {
+                    if (currentWindowWidth < 1440) { }
+                    else {
+                        if (currentWindowWidth < 1920) { }
+                        else { }
+                    }
+                }
             }
             if (innerWidth < 1440) { //  1440 > x >= 1152
             }
@@ -194,6 +315,3 @@ window.addEventListener('resize', () => {
         }
     }
 });
-// end initial header element
-bodyElemenent?.prepend(headerElement);
-// end
