@@ -22,6 +22,7 @@ window.addEventListener('resize', () => {
         else {
             if (currentWindowWidth < 1152) { }
             else {
+                currentWindowWidth = innerWidth;
                 image.style.width = '1152px';
                 if (currentWindowWidth < 1440) { }
                 else {

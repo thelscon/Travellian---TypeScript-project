@@ -28,6 +28,7 @@ window.addEventListener ('resize' , () => {
         else {
             if (currentWindowWidth < 1152) {}
             else {
+                currentWindowWidth = innerWidth
                 image.style.width = '1152px'
                 if (currentWindowWidth < 1440) {}
                 else {
@@ -80,7 +81,7 @@ window.addEventListener ('resize' , () => {
                     }
                 }
             }
-            
+
             if (innerWidth < 1440) {            }
             else {
                 if (currentWindowWidth < 768) {
@@ -95,7 +96,7 @@ window.addEventListener ('resize' , () => {
                     else {
                         if (currentWindowWidth < 1440) {
                             currentWindowWidth = innerWidth
-                        image.src = '/modules/headerMainImage/bigSize.png'
+                            image.src = '/modules/headerMainImage/bigSize.png'
                         }
                         else {        
                             if (currentWindowWidth < 1920) {}
