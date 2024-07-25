@@ -32,16 +32,15 @@ if (bodyElemenent) {
 }
 
 
-bodyElemenent?.append (
+bodyElemenent?.prepend (
     headerElement ,
     mainElement
 )
 
 headerMainImage.style.height = `${parseInt (getComputedStyle (headerElement).height) + parseInt (getComputedStyle (mainElement).height)}px`
-bodyElemenent?.append (
+mainElement.after (
     headerMainImage
 )
-
 
 
 // if (innerWidth < 768) { //  x < 768

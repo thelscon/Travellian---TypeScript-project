@@ -18,9 +18,9 @@ if (bodyElemenent) {
     bodyElemenent.style.minWidth = '320px';
     bodyElemenent.style.display = 'grid';
 }
-bodyElemenent?.append(headerElement, mainElement);
+bodyElemenent?.prepend(headerElement, mainElement);
 headerMainImage.style.height = `${parseInt(getComputedStyle(headerElement).height) + parseInt(getComputedStyle(mainElement).height)}px`;
-bodyElemenent?.append(headerMainImage);
+mainElement.after(headerMainImage);
 // if (innerWidth < 768) { //  x < 768
 // }
 // else { // x >= 768

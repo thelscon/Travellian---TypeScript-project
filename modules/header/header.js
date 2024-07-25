@@ -35,7 +35,6 @@ else { // x >= 768
 }
 let currentWindowWidth = innerWidth;
 window.addEventListener('resize', () => {
-    console.log(currentWindowWidth);
     if (innerWidth < 768) { //  x < 768
         if (currentWindowWidth < 768) { }
         else {

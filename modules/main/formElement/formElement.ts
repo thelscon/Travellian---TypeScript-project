@@ -40,7 +40,6 @@ window.addEventListener ('resize' , () => {
             else {
                 if (currentWindowWidth < 1152) {}
                 else {
-                    console.log ('tablet')
                     currentWindowWidth = innerWidth
                     formElement.style.gridTemplateAreas = '"labelDestinationElement labelPersonElement bookNowElement""destinationElement personElement bookNowElement" "labelCheckInElement labelCheckOutElement bookNowElement""checkInElement checkOutElement bookNowElement"'
                 }
@@ -48,13 +47,11 @@ window.addEventListener ('resize' , () => {
         }
         else {
             if (currentWindowWidth < 768) {
-                console.log ('desktop')
                 currentWindowWidth = innerWidth
                 formElement.style.gridTemplateAreas = '"labelDestinationElement labelPersonElement labelCheckInElement labelCheckOutElement bookNowElement""destinationElement personElement checkInElement checkOutElement bookNowElement"'
             }
             else {
                 if (currentWindowWidth < 1152) {
-                    console.log ('desktop')
                     currentWindowWidth = innerWidth
                     formElement.style.gridTemplateAreas = '"labelDestinationElement labelPersonElement labelCheckInElement labelCheckOutElement bookNowElement""destinationElement personElement checkInElement checkOutElement bookNowElement"'
                 }
